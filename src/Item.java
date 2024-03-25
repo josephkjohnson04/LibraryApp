@@ -1,19 +1,33 @@
-
-
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 public class Item {
 
     private static int lastNumber = 0;
-    private int ItemID;
+    private int id;
     private String title;
     private String desc;
-    private Date invDate;
+    private LocalDate invDate;
 
-    public Item() {
+    public Item(String title, String invDate) {
+        this.id = ++Item.lastNumber;
+        this.settitle(title);
+        this.setInvDate(invDate);
+    }
 
-        this.ItemID = ++Item.lastNumber;
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
+    public String getDateString(){
+        return this.invDate.format(Item.formatter);
+    }
+
+    public void setInvDate(String myDate) throws Exception {
+        try {
+            this.invDate = LocalDate.parse(myDate, Item.formatter);
+        } catch (Exception e){
+            throw new Exception("Invalid date! Must be MM-DD-YYYY");
+        }
     }
 
 }

@@ -16,14 +16,31 @@ public class Item {
     public Item(String title, String invDate) {
         this.id = ++Item.lastNumber;
         setTitle(title);
-        this.setInvDate(invDate);
+        setInvDate(invDate);
     }
 
-    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+    // Getters
+    public int getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public LocalDate getInvDate() {
+        return invDate;
+    }
 
     public String getDateString(){
         return this.invDate.format(Item.formatter);
     }
+
+    // Setters
 
     public void setInvDate(String myDate) throws Exception {
         try {

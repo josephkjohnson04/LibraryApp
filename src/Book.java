@@ -5,33 +5,25 @@
  * @version 1.0
  * @link https://github.com/josephkjohnson04/LibraryApp.git
  */
-public class Book {
+public class Book extends Item {
 
- // instance fields
+    // instance fields
+    private String author;
+    private String bookGenre;
 
- private String Book;
-
- private String BookGenre;
-
- // overload constructor
- public Book(String title, String invDate) throws Exception {
-        this.id = ++Item.lastNumber;
-        setTitle(title);
-        setInvDate(invDate);
+    // overload constructor
+    public Book(String title, String invDate) throws Exception {
+        super(title, invDate);
     }
 
+    public Book(bookGenre,)
 
 
+    public String getAuthor() {
+        return author;
+    }
 
-
-
-
-
-
-
-
-
-
-
-
+    public void setAuthor(String author) {
+        this.author = author;
+    }
 }

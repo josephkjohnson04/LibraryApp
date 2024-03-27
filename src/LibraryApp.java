@@ -7,7 +7,7 @@
  */
 
 public class LibraryApp {
-    private static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
         try {
             // testing for Item.java
             Item item1 = new Item("Book1", "03-26-2024");

@@ -7,13 +7,13 @@ public class Item {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
     // Instance Fields
-    private final int id;
+    private int id;
     private String title;
     private String desc;
     private LocalDate invDate;
 
     // Overload Constructor
-    public Item(String title, String invDate) {
+    public Item(String title, String invDate) throws Exception {
         this.id = ++Item.lastNumber;
         setTitle(title);
         setInvDate(invDate);
@@ -41,6 +41,17 @@ public class Item {
     }
 
     // Setters
+    public void setTitle(String title) throws Exception {
+        if (title != null && title.trim().isEmpty()) {
+            this.title = title;
+        } else {
+            throw new Exception("Title can't be empty!");
+        }
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
     public void setInvDate(String myDate) throws Exception {
         try {

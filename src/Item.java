@@ -1,18 +1,21 @@
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Date;
 
 public class Item {
-
+    // Class Fields
     private static int lastNumber = 0;
-    private int id;
+    private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
+
+    // Instance Fields
+    private final int id;
     private String title;
     private String desc;
     private LocalDate invDate;
 
+    // Overload Constructor
     public Item(String title, String invDate) {
         this.id = ++Item.lastNumber;
-        this.settitle(title);
+        setTitle(title);
         this.setInvDate(invDate);
     }
 

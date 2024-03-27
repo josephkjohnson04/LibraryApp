@@ -72,7 +72,3 @@ public class Item {
         System.out.printf("%-7d%-20s%-13s%n", id, title, invDate);
     }
 }
-
-
-
-

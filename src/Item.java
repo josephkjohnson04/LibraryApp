@@ -7,12 +7,13 @@ public class Item {
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
     // Instance Fields
-    private int id;
+    private final int id;
     private String title;
     private String desc;
     private LocalDate invDate;
 
     // Overload Constructor
+    // Ask about Exception and how to make overload into try catch
     public Item(String title, String invDate) throws Exception {
         this.id = ++Item.lastNumber;
         setTitle(title);
@@ -61,6 +62,15 @@ public class Item {
         }
     }
 
+    // Additional Methods
+    @Override
+    public String toString() {
+        return id + " " + title;
+    }
+
+    public void displayItem() {
+        System.out.printf("%-7d%-20s%-13s%n", id, title, invDate);
+    }
 }
 
 

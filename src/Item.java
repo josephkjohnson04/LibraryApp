@@ -13,7 +13,6 @@ public class Item {
     private LocalDate invDate;
 
     // Overload Constructor
-    // Ask about Exception and how to make overload into try catch
     public Item(String title, String invDate) throws Exception {
         this.id = ++Item.lastNumber;
         setTitle(title);
@@ -43,7 +42,8 @@ public class Item {
 
     // Setters
     public void setTitle(String title) throws Exception {
-        if (title != null && title.trim().isEmpty()) {
+        title = title.trim();
+        if (!title.isEmpty()) {
             this.title = title;
         } else {
             throw new Exception("Title can't be empty!");

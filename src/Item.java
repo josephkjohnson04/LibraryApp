@@ -3,7 +3,7 @@ import java.time.format.DateTimeFormatter;
 
 public class Item {
     // Class Fields
-    private static int lastNumber = 0;
+    private static int lastId = 0;
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
     // Instance Fields
@@ -14,7 +14,7 @@ public class Item {
 
     // Overload Constructor
     public Item(String title, String invDate) throws Exception {
-        this.id = ++Item.lastNumber;
+        this.id = ++Item.lastId;
         setTitle(title);
         setInvDate(invDate);
     }

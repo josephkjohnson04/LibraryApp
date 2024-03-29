@@ -41,15 +41,4 @@ public enum BookGenre {
      * Romance genre
      */
     Romance,
-
-
-
-
-
-
-
-
-
-
-
 }

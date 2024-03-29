@@ -10,9 +10,9 @@
 public class Cd extends Item {
 
     /**
-     * Authors
+     * Artists
      */
-    private String author;
+    private String artist;
 
     /**
      * Cd genres
@@ -32,27 +32,27 @@ public class Cd extends Item {
     }
 
     /**
-     * Recieves title, invDate, author, and CdGenre. The setters for author and genre are called and super passes the
+     * Recieves title, invDate, artist, and CdGenre. The setters for artist and genre are called and super passes the
      * title and invDate
      * @param cdGenre
      * @param invDate
      * @param title
-     * @param author
+     * @param artist
      * @throws Exception
      */
-    public Cd(CdGenre cdGenre, String invDate, String title, String author) throws Exception {
+    public Cd(CdGenre cdGenre, String invDate, String title, String artist) throws Exception {
         super(title, invDate);
-        this.author = author;
+        this.artist = artist;
         this.cdGenre = cdGenre;
     }
 
     /**
-     * Gets the authors name
+     * Gets the artists name
      * @return
      */
     // Getters
-    public String getAuthor() {
-        return author;
+    public String getArtist() {
+        return artist;
     }
 
     /**
@@ -64,12 +64,12 @@ public class Cd extends Item {
     }
 
     /**
-     * Sets the authors name
-     * @param author
+     * Sets the artists name
+     * @param artist
      */
     // Setters
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setArtist(String artist) {
+        this.artist = artist;
     }
 
     /**
@@ -87,7 +87,7 @@ public class Cd extends Item {
     @Override
     public void displayItem() {
         super.displayItem();
-        System.out.printf("%-25s%-20s", author, cdGenre);
+        System.out.printf("%-25s%-20s", artist, cdGenre);
     }
 
 }

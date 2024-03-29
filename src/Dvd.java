@@ -11,9 +11,9 @@
 public class Dvd extends Item {
 
     /**
-     * Authors
+     * Directors
      */
-    private String author;
+    private String director;
 
     /**
      * Dvd genres
@@ -33,27 +33,27 @@ public class Dvd extends Item {
     }
 
     /**
-     * Recieves title, invDate, author, and DvdGenre. The setters for author and genre are called and super passes the
-     * title and invDate
+     * Recieves title, invDate, director, and DvdGenre. The setters for director and genre are called and super passes
+     * the title and invDate
      * @param dvdGenre
      * @param invDate
      * @param title
-     * @param author
+     * @param director
      * @throws Exception
      */
-    public Dvd(DvdGenre dvdGenre, String invDate, String title, String author) throws Exception {
+    public Dvd(DvdGenre dvdGenre, String invDate, String title, String director) throws Exception {
         super(title, invDate);
-        this.author = author;
+        this.director = director;
         this.dvdGenre = dvdGenre;
     }
 
     /**
-     * Gets the authors name
+     * Gets the directors name
      * @return
      */
     // Getters
-    public String getAuthor() {
-        return author;
+    public String getDirector() {
+        return director;
     }
 
     /**
@@ -65,12 +65,12 @@ public class Dvd extends Item {
     }
 
     /**
-     * Sets the authors name
-     * @param author
+     * Sets the directors name
+     * @param director
      */
     // Setters
-    public void setAuthor(String author) {
-        this.author = author;
+    public void setDirector(String director) {
+        this.director = director;
     }
 
     /**
@@ -88,7 +88,7 @@ public class Dvd extends Item {
     @Override
     public void displayItem() {
         super.displayItem();
-        System.out.printf("%-25s%-20s", author, dvdGenre);
+        System.out.printf("%-25s%-20s", director, dvdGenre);
     }
 
 }

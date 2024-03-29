@@ -5,13 +5,14 @@
  * @version 1.0
  * @link https://github.com/josephkjohnson04/LibraryApp.git
  */
+
 public class Book extends Item {
 
-    // instance fields
+    // Instance Fields
     private String author;
     private BookGenre bookGenre;
 
-    // overload constructor
+    // Overload Constructors
     public Book(String title, String invDate) throws Exception {
         super(title, invDate);
     }
@@ -22,20 +23,29 @@ public class Book extends Item {
         this.bookGenre = bookGenre;
     }
 
-
+    // Getters
     public String getAuthor() {
         return author;
-    }
-
-    public void setAuthor(String author) {
-        this.author = author;
     }
 
     public BookGenre getBookGenre() {
         return this.bookGenre;
     }
 
+    // Setters
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
     public void setBookGenre(BookGenre bookGenre) {
         this.bookGenre = bookGenre;
     }
+
+    // Additional Methods
+    @Override
+    public void displayItem() {
+        super.displayItem();
+        System.out.printf("%-7d%-20s%", author, bookGenre);
+    }
+
 }

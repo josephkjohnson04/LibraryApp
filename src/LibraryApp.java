@@ -6,8 +6,6 @@
  * @link https://github.com/josephkjohnson04/LibraryApp.git
  */
 
-import java.util.ArrayList;
-
 public class LibraryApp {
     public static void main(String[] args) throws Exception {
         try {
@@ -28,6 +26,7 @@ public class LibraryApp {
             System.out.println("Date: " + book1.getInvDate());
             System.out.println("Title: " + book1.getTitle());
             System.out.println("Author: " + book1.getAuthor());
+            book1.displayItem();
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }

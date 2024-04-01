@@ -77,6 +77,6 @@ public class Item {
     }
 
     public void displayItem() {
-        System.out.printf("%-7d%-20s%-5s ", id, title, invDate);
+        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
     }
 }

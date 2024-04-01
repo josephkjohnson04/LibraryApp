@@ -78,8 +78,7 @@ public class LibraryApp {
      * @throws Exception Any exception thrown to addBook will be back to the
     calling method.
      */
-    private Book addBook(String title, String dateReceived, String description)
-            throws Exception {
+    private Book addBook(String title, String dateReceived, String description) throws Exception {
         Book book;
         int userInput = 0;
         String author = null;
@@ -108,8 +107,7 @@ public class LibraryApp {
      * @throws Exception Any exception thrown to addcd will be back to the
     calling method.
      */
-    private Cd addCd(String title, String dateReceived, String description)
-            throws Exception {
+    private Cd addCd(String title, String dateReceived, String description) throws Exception {
         Cd cd;
         int userInput = 0;
         String artist = null;
@@ -138,8 +136,7 @@ public class LibraryApp {
      * @throws Exception Any exception thrown to adddvd will be back to the
     calling method.
      */
-    private Dvd addDvd(String title, String dateReceived, String description)
-            throws Exception {
+    private Dvd addDvd(String title, String dateReceived, String description) throws Exception {
         Dvd dvd;
         int userInput = 0;
         String director = null;
@@ -202,6 +199,7 @@ public class LibraryApp {
                         inventoryType);
         } // end of switch
     } // end of addItem method
+
     /**
      * Display the Library's inventory's detail group by inventory type.
      */
@@ -215,10 +213,31 @@ public class LibraryApp {
                 item.displayItem();
             }
         }
+
+        System.out.println("\nCd Inventory");
+        System.out.println(SINGLE_LINE);
+        System.out.println("ID  Title           Date Rec'd Artist          Genre");
+        System.out.println("--- --------------- ---------- --------------- ----------");
+        for (Item item : inventory) {
+            if (item instanceof Cd){
+                item.displayItem();
+            }
+        }
+
+        System.out.println("\nDvd Inventory");
+        System.out.println(SINGLE_LINE);
+        System.out.println("ID  Title           Date Rec'd Director        Genre");
+        System.out.println("--- --------------- ---------- --------------- ----------");
+        for (Item item : inventory) {
+            if (item instanceof Dvd){
+                item.displayItem();
+            }
+        }
         System.out.println();
 //TO-DO: ADD LOGIC FOR DISPLAYING OTHER INVENTORY TYPES
         Input.getLine("Press enter to continue...");
     } // end of displayInventory
+
     /**
      * The main menu that allows the user to add, delete, display, load, and save
      inventory.

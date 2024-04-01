@@ -88,7 +88,7 @@ public class Dvd extends Item {
     @Override
     public void displayItem() {
         super.displayItem();
-        System.out.printf("%-25s%-20s", director, dvdGenre);
+        System.out.printf("%-16s%-20s", director, dvdGenre);
     }
 
 }

@@ -97,6 +97,65 @@ public class LibraryApp {
         return book;
     } // end of addBook method
 
+    /**
+     * Add a cd to the Library's inventory. Allows the user to enter the cd's
+     artist and genre.
+     *
+     * @param title The item's title.
+     * @param dateReceived The item's date received into inventory.
+     * @param description The item's description which is not a required field.
+     * @return The newly created cd.
+     * @throws Exception Any exception thrown to addcd will be back to the
+    calling method.
+     */
+    private Cd addCd(String title, String dateReceived, String description)
+            throws Exception {
+        Cd cd;
+        int userInput = 0;
+        String artist = null;
+        CdGenre genre = null;
+        artist = Input.getString("Artist: ");
+        try {
+            userInput = Input.getIntRange("Genre 1=Classical, 2=Country, 3=Jazz, 4=Rock, 5=Rap, 6=Pop: ",
+                    1, 6);
+            genre = CdGenre.values()[userInput - 1];
+        } catch (Exception e){
+            throw new Exception("Invalid data! Cd Genre = " + genre);
+        }
+        cd = new Cd(genre, dateReceived, artist, title);
+        cd.setDesc(description);
+        return cd;
+    } // end of addCd method
+
+    /**
+     * Add a dvd to the Library's inventory. Allows the user to enter the dvd's
+     director and genre.
+     *
+     * @param title The item's title.
+     * @param dateReceived The item's date received into inventory.
+     * @param description The item's description which is not a required field.
+     * @return The newly created dvd.
+     * @throws Exception Any exception thrown to adddvd will be back to the
+    calling method.
+     */
+    private Dvd addDvd(String title, String dateReceived, String description)
+            throws Exception {
+        Dvd dvd;
+        int userInput = 0;
+        String director = null;
+        DvdGenre genre = null;
+        director = Input.getString("Director: ");
+        try {
+            userInput = Input.getIntRange("Genre 1=Action, 2=Horror, 3=Romance, 4=Drama, 5=Scifi, 6=Comedy: ",
+                    1, 6);
+            genre = DvdGenre.values()[userInput - 1];
+        } catch (Exception e){
+            throw new Exception("Invalid data! Dvd Genre = " + genre);
+        }
+        dvd = new Dvd(genre, dateReceived, director, title);
+        dvd.setDesc(description);
+        return dvd;
+    } // end of addDvd method
 
     /**
      * Add an item to inventory. Allow's the user to enter the item's title,
@@ -127,8 +186,16 @@ public class LibraryApp {
                 Input.getLine("Press enter to continue...");
                 break;
             case 2:
+                Cd cd = addCd(title, dateReceived, description);
+                inventory.add(cd);
+                System.out.println("Successful Add: " + cd);
+                Input.getLine("Press enter to continue...");
                 break;
             case 3:
+                Dvd dvd = addDvd(title, dateReceived, description);
+                inventory.add(dvd);
+                System.out.println("Successful Add: " + dvd);
+                Input.getLine("Press enter to continue...");
                 break;
             default:
                 throw new Exception("Invalid Input! Inventory Type = " +

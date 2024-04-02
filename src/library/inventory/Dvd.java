@@ -1,15 +1,16 @@
 package library.inventory;
 
 /**
- * Section 4 - Library App
+ * This code creates director and dvdGenre and sets them for use in LibraryApp.java.
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-
 public class Dvd extends Item {
+
+    // Instance Fields
 
     /**
      * Directors
@@ -48,11 +49,12 @@ public class Dvd extends Item {
         this.dvdGenre = dvdGenre;
     }
 
+    // Getters
+
     /**
      * Gets the directors name
      * @return
      */
-    // Getters
     public String getDirector() {
         return director;
     }
@@ -65,11 +67,12 @@ public class Dvd extends Item {
         return this.dvdGenre;
     }
 
+    // Setters
+
     /**
      * Sets the directors name
      * @param director
      */
-    // Setters
     public void setDirector(String director) {
         this.director = director;
     }
@@ -82,10 +85,11 @@ public class Dvd extends Item {
         this.dvdGenre = dvdGenre;
     }
 
+    // Additional Method
+
     /**
      * Outputs displayItem with updated info from inventory.Dvd.java
      */
-    // Additional Methods
     @Override
     public void displayItem() {
         super.displayItem();

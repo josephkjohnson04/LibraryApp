@@ -1,5 +1,9 @@
-package library.inventory; /**
+package library.inventory;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+/**
  * Section 4 - Library App
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
@@ -7,21 +11,22 @@ package library.inventory; /**
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
-
 public class Item {
+
     // Class Fields
+
     private static int lastId = 0;
     private static final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("MM-dd-yyyy");
 
     // Instance Fields
+
     private final int id;
     private String title;
     private String desc;
     private LocalDate invDate;
 
     // Overload Constructor
+
     public Item(String title, String invDate) throws Exception {
         this.id = ++Item.lastId;
         setTitle(title);
@@ -29,6 +34,7 @@ public class Item {
     }
 
     // Getters
+
     public int getId() {
         return id;
     }
@@ -50,6 +56,7 @@ public class Item {
     }
 
     // Setters
+
     public void setTitle(String title) throws Exception {
         title = title.trim();
         if (!title.isEmpty()) {
@@ -72,6 +79,7 @@ public class Item {
     }
 
     // Additional Methods
+
     @Override
     public String toString() {
         return id + " " + title;

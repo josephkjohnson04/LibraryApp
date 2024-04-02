@@ -1,15 +1,16 @@
 package library.inventory;
 
 /**
- * Section 4 - Library App
+ * This code creates artist and cdGenre and sets them for use in LibraryApp.java.
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-
 public class Cd extends Item {
+
+    // Instance Fields
 
     /**
      * Artists
@@ -48,11 +49,12 @@ public class Cd extends Item {
         this.cdGenre = cdGenre;
     }
 
+    // Getters
+
     /**
      * Gets the artists name
      * @return
      */
-    // Getters
     public String getArtist() {
         return artist;
     }
@@ -65,11 +67,12 @@ public class Cd extends Item {
         return this.cdGenre;
     }
 
+    // Setters
+
     /**
      * Sets the artists name
      * @param artist
      */
-    // Setters
     public void setArtist(String artist) {
         this.artist = artist;
     }
@@ -82,10 +85,11 @@ public class Cd extends Item {
         this.cdGenre = cdGenre;
     }
 
+    // Additional Method
+
     /**
      * Outputs displayItem with updated info from inventory.Cd.java
      */
-    // Additional Methods
     @Override
     public void displayItem() {
         super.displayItem();

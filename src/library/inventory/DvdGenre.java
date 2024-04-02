@@ -1,6 +1,7 @@
-package library.inventory; /**
+package library.inventory;
 
- * Section 4 - Library App
+/**
+ * This Enum stores DVD genres for future use.
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
@@ -10,7 +11,6 @@ package library.inventory; /**
 /**
  * Valid book genres for book.java
  */
-
 public enum DvdGenre {
 
     /**

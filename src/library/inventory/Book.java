@@ -1,7 +1,7 @@
 package library.inventory;
 
 /**
- * Section 4 - Library App
+ * This code creates author and bookGenre and sets them for use in LibraryApp.java.
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
@@ -11,6 +11,7 @@ package library.inventory;
 public class Book extends Item {
 
     // Instance Fields
+
     /**
      * Authors
      */
@@ -48,11 +49,12 @@ public class Book extends Item {
         this.bookGenre = bookGenre;
     }
 
+    // Getters
+
     /**
      * Gets the authors name
      * @return
      */
-    // Getters
     public String getAuthor() {
         return author;
     }
@@ -65,11 +67,12 @@ public class Book extends Item {
         return this.bookGenre;
     }
 
+    // Setters
+
     /**
      * Sets the authors name
      * @param author
      */
-    // Setters
     public void setAuthor(String author) {
         this.author = author;
     }
@@ -82,10 +85,11 @@ public class Book extends Item {
         this.bookGenre = bookGenre;
     }
 
+    // Additional Method
+
     /**
      * Outputs displayItem with updated info from inventory.Book.java
      */
-    // Additional Methods
     @Override
     public void displayItem() {
         super.displayItem();

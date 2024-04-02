@@ -1,23 +1,16 @@
 package library.app;
 
-//package library.app;
-
-// import library.inventory.inventory.Book;
-// import library.inventory.inventory.BookGenre;
-// import library.inventory.inventory.Item;
-
+import library.inventory.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Library App that allows adding, deleting, displaying, saving, and loading
- inventory for Books, CDs, and DVDs.
- * <a href="PUT_YOUR_URL_HERE">GitHub Repository URL</a>
+ *  inventory for Books, CDs, and DVDs.
  *
- * @author PUT_YOUR_NAMES_HERE
- * @since PUT_THE_CURRENT_DATE_HERE
- * @version 1.0 beta
- *
+ * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
+ * @version 1.0
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
 public class LibraryApp {

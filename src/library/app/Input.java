@@ -5,12 +5,13 @@ import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
 /**
- * Handles all user's input with validation
- * 
- * @author dejohns2
- * @since 2024.03.27
- * @version 1.0 beta
+ * Handles all the user's inputs with data validation
+ *
+ * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
+ * @version 1.0
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
+
 public class Input {
 	
     /**

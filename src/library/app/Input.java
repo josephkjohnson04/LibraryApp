@@ -1,4 +1,4 @@
-// package library.app;
+package library.app;// package library.app;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -154,5 +154,4 @@ public class Input {
 
     } // end of getInt
 
-
-} // end of library.app.Input class
+} // end of library.app.app.Input class

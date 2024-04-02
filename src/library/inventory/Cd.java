@@ -1,9 +1,11 @@
+package library.inventory;
+
 /**
  * Section 4 - Library App
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
- * @link https://github.com/josephkjohnson04/LibraryApp.git
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
 
@@ -15,7 +17,7 @@ public class Cd extends Item {
     private String artist;
 
     /**
-     * Cd genres
+     * inventory.Cd genres
      */
     private CdGenre cdGenre;
 
@@ -32,7 +34,7 @@ public class Cd extends Item {
     }
 
     /**
-     * Recieves title, invDate, artist, and CdGenre. The setters for artist and genre are called and super passes the
+     * Recieves title, invDate, artist, and inventory.CdGenre. The setters for artist and genre are called and super passes the
      * title and invDate
      * @param cdGenre
      * @param invDate
@@ -56,7 +58,7 @@ public class Cd extends Item {
     }
 
     /**
-     * Gets the Cd genre
+     * Gets the inventory.Cd genre
      * @return
      */
     public CdGenre getCdGenre() {
@@ -73,7 +75,7 @@ public class Cd extends Item {
     }
 
     /**
-     * Sets the Cd genre
+     * Sets the inventory.Cd genre
      * @param cdGenre
      */
     public void setCdGenre(CdGenre cdGenre) {
@@ -81,7 +83,7 @@ public class Cd extends Item {
     }
 
     /**
-     * Outputs displayItem with updated info from Cd.java
+     * Outputs displayItem with updated info from inventory.Cd.java
      */
     // Additional Methods
     @Override

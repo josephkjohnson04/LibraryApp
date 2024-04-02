@@ -1,9 +1,11 @@
+package library.inventory;
+
 /**
  * Section 4 - Library App
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
- * @link https://github.com/josephkjohnson04/LibraryApp.git
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
 public class Book extends Item {
@@ -15,7 +17,7 @@ public class Book extends Item {
     private String author;
 
     /**
-     * Book genres
+     * inventory.Book genres
      */
     private BookGenre bookGenre;
 
@@ -81,7 +83,7 @@ public class Book extends Item {
     }
 
     /**
-     * Outputs displayItem with updated info from Book.java
+     * Outputs displayItem with updated info from inventory.Book.java
      */
     // Additional Methods
     @Override

@@ -1,36 +1,37 @@
-/**
+package library.inventory; /**
+
  * Section 4 - Library App
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
- * @link https://github.com/josephkjohnson04/LibraryApp.git
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
 /**
  * Valid book genres for book.java
  */
 
-public enum BookGenre {
+public enum DvdGenre {
 
     /**
-     * Childrens genre
+     * Action genre
      */
-    Children,
+    Action,
 
     /**
-     * Fiction genre
+     * Horror genre
      */
-    Fiction,
+    Horror,
 
     /**
-     * Nonfiction genre
+     * Romance genre
      */
-    Nonfiction,
+    Romance,
 
     /**
-     * Mystery genre
+     * Drama genre
      */
-    Mystery,
+    Drama,
 
     /**
      * Scifi genre
@@ -38,7 +39,7 @@ public enum BookGenre {
     Scifi,
 
     /**
-     * Romance genre
+     * Comedy genre
      */
-    Romance,
+    Comedy,
 }

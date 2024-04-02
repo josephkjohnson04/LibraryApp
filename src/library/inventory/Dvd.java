@@ -1,10 +1,11 @@
+package library.inventory;
 
 /**
  * Section 4 - Library App
  *
  * @author Caleb Jenkinson, Kyler Hanson, and Joe Johnson
  * @version 1.0
- * @link https://github.com/josephkjohnson04/LibraryApp.git
+ * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
 
@@ -16,7 +17,7 @@ public class Dvd extends Item {
     private String director;
 
     /**
-     * Dvd genres
+     * inventory.Dvd genres
      */
     private DvdGenre dvdGenre;
 
@@ -33,7 +34,7 @@ public class Dvd extends Item {
     }
 
     /**
-     * Recieves title, invDate, director, and DvdGenre. The setters for director and genre are called and super passes
+     * Recieves title, invDate, director, and inventory.DvdGenre. The setters for director and genre are called and super passes
      * the title and invDate
      * @param dvdGenre
      * @param invDate
@@ -57,7 +58,7 @@ public class Dvd extends Item {
     }
 
     /**
-     * Gets the Dvd genre
+     * Gets the inventory.Dvd genre
      * @return
      */
     public DvdGenre getDvdGenre() {
@@ -74,7 +75,7 @@ public class Dvd extends Item {
     }
 
     /**
-     * Sets the Dvd genre
+     * Sets the inventory.Dvd genre
      * @param dvdGenre
      */
     public void setDvdGenre(DvdGenre dvdGenre) {
@@ -82,7 +83,7 @@ public class Dvd extends Item {
     }
 
     /**
-     * Outputs displayItem with updated info from Dvd.java
+     * Outputs displayItem with updated info from inventory.Dvd.java
      */
     // Additional Methods
     @Override

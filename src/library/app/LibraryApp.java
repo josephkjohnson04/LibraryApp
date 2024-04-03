@@ -196,6 +196,10 @@ public class LibraryApp {
         } // end of switch
     } // end of addItem method
 
+    /**
+     * Logic for saving the user's inputs in inventorydata.ser, I used Debbie's first methods which saves the data
+     * as objects.
+     */
     private void saveInventory() {
         try{
             FileOutputStream writeData = new FileOutputStream("inventorydata.ser");
@@ -210,6 +214,9 @@ public class LibraryApp {
         }
     }
 
+    /**
+     * Logic for loading the data back into the game from inventorydata.ser.
+     */
     private void loadInventory() {
         try{
             FileInputStream readData = new FileInputStream("inventorydata.ser");

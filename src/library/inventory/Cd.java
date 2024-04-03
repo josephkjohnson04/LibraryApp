@@ -37,13 +37,13 @@ public class Cd extends Item {
     /**
      * Recieves title, invDate, artist, and inventory.CdGenre. The setters for artist and genre are called and super passes the
      * title and invDate
-     * @param cdGenre
+     @param title
      * @param invDate
-     * @param title
      * @param artist
+     * @param cdGenre
      * @throws Exception
      */
-    public Cd(CdGenre cdGenre, String invDate, String title, String artist) throws Exception {
+    public Cd(String title, String invDate, String artist, CdGenre cdGenre) throws Exception {
         super(title, invDate);
         this.artist = artist;
         this.cdGenre = cdGenre;

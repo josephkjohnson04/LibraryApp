@@ -37,13 +37,13 @@ public class Dvd extends Item {
     /**
      * Recieves title, invDate, director, and inventory.DvdGenre. The setters for director and genre are called and super passes
      * the title and invDate
-     * @param dvdGenre
-     * @param invDate
      * @param title
+     * @param invDate
      * @param director
+     * @param dvdGenre
      * @throws Exception
      */
-    public Dvd(DvdGenre dvdGenre, String invDate, String title, String director) throws Exception {
+    public Dvd(String title, String invDate, String director, DvdGenre dvdGenre) throws Exception {
         super(title, invDate);
         this.director = director;
         this.dvdGenre = dvdGenre;

@@ -1,5 +1,6 @@
 package library.inventory;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
@@ -11,7 +12,7 @@ import java.time.format.DateTimeFormatter;
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-public class Item {
+public class Item implements Serializable {
 
     // Class Fields
 

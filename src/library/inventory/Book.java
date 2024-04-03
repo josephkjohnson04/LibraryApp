@@ -37,13 +37,13 @@ public class Book extends Item {
     /**
      * Recieves title, invDate, author, and bookGenre. The setters for author and genre are called and super passes the
      * title and invDate
-     * @param bookGenre
-     * @param invDate
      * @param title
+     * @param invDate
      * @param author
+     * @param bookGenre
      * @throws Exception
      */
-    public Book(BookGenre bookGenre, String invDate, String title, String author) throws Exception {
+    public Book(String title, String invDate, String author, BookGenre bookGenre) throws Exception {
         super(title, invDate);
         this.author = author;
         this.bookGenre = bookGenre;

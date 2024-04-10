@@ -13,7 +13,7 @@ import java.time.format.DateTimeFormatter;
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-public class Item implements Serializable {
+public abstract class Item implements Serializable {
 
     // Class Fields
 
@@ -32,22 +32,22 @@ public class Item implements Serializable {
     /**
      * Id assigned to all books, cds, or dvds
      */
-    private final int id;
+    protected final int id;
 
     /**
      * The title for books, cds, or dvds
      */
-    private String title;
+    protected String title;
 
     /**
      * The optional description for books, cds, or dvds
      */
-    private String desc;
+    protected String desc;
 
     /**
      * The inventory date for books, cds, or dvds
      */
-    private LocalDate invDate;
+    protected LocalDate invDate;
 
     // Overload Constructor
 
@@ -167,7 +167,5 @@ public class Item implements Serializable {
     /**
      * Returns the id, title, and inventory date in formatting for display
      */
-    public void displayItem() {
-        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
-    }
+    public abstract void displayItem();
 }

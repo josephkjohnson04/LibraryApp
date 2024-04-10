@@ -63,6 +63,12 @@ public class Item implements Serializable {
         setInvDate(invDate);
     }
 
+    public Item(int id, String title, String invDate) throws Exception {
+        this.id = id;
+        this.setTitle(title);
+        this.setInvDate(invDate);
+    }
+
     // Getters
 
     /**
@@ -129,11 +135,16 @@ public class Item implements Serializable {
         this.desc = desc;
     }
 
+    public static void setLastId(int id) {
+        Item.lastId = id;
+    }
+
     /**
      * Sets the inventory date and insures the date is correctly entered
      * @param myDate
      * @throws Exception
      */
+
     public void setInvDate(String myDate) throws Exception {
         try {
             this.invDate = LocalDate.parse(myDate, Item.formatter);

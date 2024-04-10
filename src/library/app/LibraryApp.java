@@ -56,7 +56,7 @@ public class LibraryApp {
             if (item.getId() == id){
                 inventory.remove(item);
                 System.out.println("Successful Delete: " + item);
-                Input.getLine("Press enter to continue...");
+                Input.getLine("Press enter to continue...\n");
                 return;
             }
         }
@@ -176,19 +176,19 @@ public class LibraryApp {
                 Book book = addBook(title, dateReceived, description);
                 inventory.add(book);
                 System.out.println("Successful Add: " + book);
-                Input.getLine("Press enter to continue...");
+                Input.getLine("Press enter to continue...\n");
                 break;
             case 2:
                 Cd cd = addCd(title, dateReceived, description);
                 inventory.add(cd);
                 System.out.println("Successful Add: " + cd);
-                Input.getLine("Press enter to continue...");
+                Input.getLine("Press enter to continue...\n");
                 break;
             case 3:
                 Dvd dvd = addDvd(title, dateReceived, description);
                 inventory.add(dvd);
                 System.out.println("Successful Add: " + dvd);
-                Input.getLine("Press enter to continue...");
+                Input.getLine("Press enter to continue...\n");
                 break;
             default:
                 throw new Exception("Invalid app.Input! Inventory Type = " +
@@ -224,6 +224,7 @@ public class LibraryApp {
 
             inventory = (ArrayList<Item>) readStream.readObject();
             readStream.close();
+            Item.setLastId(inventory.get(inventory.size()-1).getId());
         }catch (Exception e) {
             e.printStackTrace();
         }
@@ -244,7 +245,7 @@ public class LibraryApp {
             }
         }
 
-        System.out.println("Cd Inventory");
+        System.out.println("\nCd Inventory");
         System.out.println(SINGLE_LINE);
         System.out.println("ID  Title           Date Rec'd Artist          Genre");
         System.out.println("--- --------------- ---------- --------------- ----------");
@@ -266,7 +267,7 @@ public class LibraryApp {
         }
         System.out.println();
 //TO-DO: ADD LOGIC FOR DISPLAYING OTHER INVENTORY TYPES
-        System.out.print("Press enter to continue...");
+        System.out.print("Press enter to continue...\n");
     } // end of displayInventory
 
     /**
@@ -282,7 +283,7 @@ public class LibraryApp {
             System.out.println(SINGLE_LINE);
             System.out.println("Main Menu");
             System.out.println(SINGLE_LINE);
-            System.out.println("0 = End Game");
+            System.out.println("0 = Exit");
             System.out.println("1 = Add inventory.Item");
             System.out.println("2 = Delete inventory.Item");
             System.out.println("3 = Display Inventory");
@@ -300,7 +301,7 @@ public class LibraryApp {
                         this.addItem();
                     } catch (Exception e){
                         System.out.println(e.getMessage());
-                        Input.getLine("Press enter to continue...");
+                        Input.getLine("Press enter to continue...\n");
                     }
                     break;
                 case 2:
@@ -308,7 +309,7 @@ public class LibraryApp {
                         this.deleteItem();
                     } catch (Exception e){
                         System.out.println(e.getMessage());
-                        Input.getLine("Press enter to continue...");
+                        Input.getLine("Press enter to continue...\n");
                     }
                     break;
                 case 3:

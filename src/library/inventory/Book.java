@@ -49,6 +49,12 @@ public class Book extends Item {
         this.bookGenre = bookGenre;
     }
 
+    public Book(int id, String title, String invDate, String author, BookGenre bookGenre) throws Exception {
+        super(id, title, invDate);
+        this.author = author;
+        this.bookGenre = bookGenre;
+    }
+
     // Getters
 
     /**

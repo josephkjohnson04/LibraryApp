@@ -49,6 +49,15 @@ public class Book extends Item {
         this.bookGenre = bookGenre;
     }
 
+    /**
+     * Initializes CD with an id, title, inventory date, author, and genre from a superclass
+     * @param id
+     * @param title
+     * @param invDate
+     * @param author
+     * @param bookGenre
+     * @throws Exception
+     */
     public Book(int id, String title, String invDate, String author, BookGenre bookGenre) throws Exception {
         super(id, title, invDate);
         this.author = author;

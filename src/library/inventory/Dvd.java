@@ -49,6 +49,21 @@ public class Dvd extends Item {
         this.dvdGenre = dvdGenre;
     }
 
+    /**
+     * Initializes DVD with an id, title, inventory date, director, and genre from a superclass
+     * @param id
+     * @param title
+     * @param invDate
+     * @param director
+     * @param dvdGenre
+     * @throws Exception
+     */
+    public Dvd(int id, String title, String invDate, String director, DvdGenre dvdGenre) throws Exception {
+        super(id, title, invDate);
+        this.director = director;
+        this.dvdGenre = dvdGenre;
+    }
+
     // Getters
 
     /**
@@ -92,7 +107,7 @@ public class Dvd extends Item {
      */
     @Override
     public void displayItem() {
-        super.displayItem();
+        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
         System.out.printf("%-16s%-20s", director, dvdGenre);
     }
 

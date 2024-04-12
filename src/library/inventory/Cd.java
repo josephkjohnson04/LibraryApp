@@ -49,6 +49,20 @@ public class Cd extends Item {
         this.cdGenre = cdGenre;
     }
 
+    /**
+     * Initializes CD with an id, title, inventory date, artist, and genre from a superclass
+     * @param id
+     * @param title
+     * @param invDate
+     * @param artist
+     * @param cdGenre
+     * @throws Exception
+     */
+    public Cd(int id, String title, String invDate, String artist, CdGenre cdGenre) throws Exception {
+        super(id, title, invDate);
+        this.artist = artist;
+        this.cdGenre = cdGenre;
+    }
 
     // Getters
 
@@ -93,7 +107,7 @@ public class Cd extends Item {
      */
     @Override
     public void displayItem() {
-        super.displayItem();
+        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
         System.out.printf("%-16s%-20s", artist, cdGenre);
     }
 

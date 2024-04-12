@@ -107,7 +107,7 @@ public class Cd extends Item {
      */
     @Override
     public void displayItem() {
-        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
+        System.out.printf("%-4d%-16s%-5s ", id, title, getInvDate());
         System.out.printf("%-16s%-20s", artist, cdGenre);
     }
 

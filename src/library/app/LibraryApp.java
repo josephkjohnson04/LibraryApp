@@ -68,13 +68,13 @@ public class LibraryApp {
      author and genre.
      *
      * @param title The item's title.
-     * @param dateReceived The item's date received into inventory.
+     * @param invDate The item's date received into inventory.
      * @param description The item's description which is not a required field.
      * @return The newly created book.
      * @throws Exception Any exception thrown to addBook will be back to the
     calling method.
      */
-    private Book addBook(String title, String dateReceived, String description) throws Exception {
+    private Book addBook(String title, String invDate, String description) throws Exception {
         Book book;
         int userInput = 0;
         String author = null;
@@ -87,7 +87,7 @@ public class LibraryApp {
         } catch (Exception e){
             throw new Exception("Invalid data! inventory.Book Genre = " + genre);
         }
-        book = new Book(title, dateReceived, author, genre);
+        book = new Book(title, invDate, author, genre);
         book.setDesc(description);
         return book;
     } // end of addBook method
@@ -97,13 +97,13 @@ public class LibraryApp {
      artist and genre.
      *
      * @param title The item's title.
-     * @param dateReceived The item's date received into inventory.
+     * @param invDate The item's date received into inventory.
      * @param description The item's description which is not a required field.
      * @return The newly created cd.
-     * @throws Exception Any exception thrown to addcd will be back to the
+     * @throws Exception Any exception thrown to add cd will be back to the
     calling method.
      */
-    private Cd addCd(String title, String dateReceived, String description) throws Exception {
+    private Cd addCd(String title, String invDate, String description) throws Exception {
         Cd cd;
         int userInput = 0;
         String artist = null;
@@ -116,7 +116,7 @@ public class LibraryApp {
         } catch (Exception e){
             throw new Exception("Invalid data! inventory.Cd Genre = " + genre);
         }
-        cd = new Cd(title, dateReceived, artist, genre);
+        cd = new Cd(title, invDate, artist, genre);
         cd.setDesc(description);
         return cd;
     } // end of addCd method
@@ -126,13 +126,13 @@ public class LibraryApp {
      director and genre.
      *
      * @param title The item's title.
-     * @param dateReceived The item's date received into inventory.
+     * @param invDate The item's date received into inventory.
      * @param description The item's description which is not a required field.
      * @return The newly created dvd.
-     * @throws Exception Any exception thrown to adddvd will be back to the
+     * @throws Exception Any exception thrown to add dvd will be back to the
     calling method.
      */
-    private Dvd addDvd(String title, String dateReceived, String description) throws Exception {
+    private Dvd addDvd(String title, String invDate, String description) throws Exception {
         Dvd dvd;
         int userInput = 0;
         String director = null;
@@ -145,7 +145,7 @@ public class LibraryApp {
         } catch (Exception e){
             throw new Exception("Invalid data! inventory.Dvd Genre = " + genre);
         }
-        dvd = new Dvd(title, dateReceived, director, genre);
+        dvd = new Dvd(title, invDate, director, genre);
         dvd.setDesc(description);
         return dvd;
     } // end of addDvd method
@@ -162,30 +162,30 @@ public class LibraryApp {
     private void addItem() throws Exception {
         String title = null;
         String description = null;
-        String dateReceived = null;
+        String invDate = null;
         int inventoryType = 0;
         System.out.println("Add Inventory");
         System.out.println(SINGLE_LINE);
         System.out.println("Please enter the following inventory information:");
         title = Input.getString("Title: ");
-        dateReceived = Input.getDate("Date Received (MM-DD-YYYY): ");
+        invDate = Input.getDate("Date Received (MM-DD-YYYY): ");
         description = Input.getLine("Description or press enter to continue: ");
         inventoryType = Input.getIntRange("Type 1=Book, 2=CD, 3=DVD: ", 1, 3);
         switch(inventoryType){
             case 1:
-                Book book = addBook(title, dateReceived, description);
+                Book book = addBook(title, invDate, description);
                 inventory.add(book);
                 System.out.println("Successful Add: " + book);
                 Input.getLine("Press enter to continue...\n");
                 break;
             case 2:
-                Cd cd = addCd(title, dateReceived, description);
+                Cd cd = addCd(title, invDate, description);
                 inventory.add(cd);
                 System.out.println("Successful Add: " + cd);
                 Input.getLine("Press enter to continue...\n");
                 break;
             case 3:
-                Dvd dvd = addDvd(title, dateReceived, description);
+                Dvd dvd = addDvd(title, invDate, description);
                 inventory.add(dvd);
                 System.out.println("Successful Add: " + dvd);
                 Input.getLine("Press enter to continue...\n");

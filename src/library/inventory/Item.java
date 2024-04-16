@@ -108,7 +108,7 @@ public abstract class Item implements Serializable {
      * @return
      */
     public String getDateString(){
-        return this.invDate.format(Item.formatter);
+        return invDate.format(Item.formatter);
     }
 
     // Setters

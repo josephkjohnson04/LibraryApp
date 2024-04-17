@@ -247,8 +247,8 @@ public class LibraryApp {
 
         System.out.println("\nCd Inventory");
         System.out.println(SINGLE_LINE);
-        System.out.println("ID  Title           Date Rec'd Artist          Genre");
-        System.out.println("--- --------------- ---------- --------------- ----------");
+        System.out.println("ID  Title           Date Rec'd Artist          Genre      Checked Out?");
+        System.out.println("--- --------------- ---------- --------------- ---------- ------------");
         for (Item item : inventory) {
             if (item instanceof Cd){
                 item.displayItem();
@@ -258,8 +258,8 @@ public class LibraryApp {
 
         System.out.println("\nDvd Inventory");
         System.out.println(SINGLE_LINE);
-        System.out.println("ID  Title           Date Rec'd Director        Genre");
-        System.out.println("--- --------------- ---------- --------------- ----------");
+        System.out.println("ID  Title           Date Rec'd Director        Genre      Checked Out?");
+        System.out.println("--- --------------- ---------- --------------- ---------- ------------");
         for (Item item : inventory) {
             if (item instanceof Dvd){
                 item.displayItem();

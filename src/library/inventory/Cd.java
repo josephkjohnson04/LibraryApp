@@ -8,7 +8,7 @@ package library.inventory;
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-public class Cd extends Item {
+public class Cd extends Item implements CheckInOut{
 
     // Instance Fields
 
@@ -22,6 +22,11 @@ public class Cd extends Item {
      */
     private CdGenre cdGenre;
 
+    /**
+     * Yes or no if book is checked out
+     */
+    private boolean checkedOut;
+
     // Overload Constructors
 
     /**
@@ -32,6 +37,7 @@ public class Cd extends Item {
      */
     public Cd(String title, String invDate) throws Exception {
         super(title, invDate);
+        this.checkedOut = false;
     }
 
     /**
@@ -47,6 +53,7 @@ public class Cd extends Item {
         super(title, invDate);
         this.artist = artist;
         this.cdGenre = cdGenre;
+        this.checkedOut = false;
     }
 
     /**
@@ -62,6 +69,7 @@ public class Cd extends Item {
         super(id, title, invDate);
         this.artist = artist;
         this.cdGenre = cdGenre;
+        this.checkedOut = false;
     }
 
     // Getters
@@ -100,7 +108,22 @@ public class Cd extends Item {
         this.cdGenre = cdGenre;
     }
 
-    // Additional Method
+    // Additional Methods
+
+    @Override
+    public void checkOut() {
+        checkedOut = true;
+    }
+
+    @Override
+    public void checkIn() {
+        checkedOut = false;
+    }
+
+    @Override
+    public boolean isCheckedOut() {
+        return checkedOut;
+    }
 
     /**
      * Outputs displayItem with updated info from inventory.Cd.java
@@ -108,7 +131,7 @@ public class Cd extends Item {
     @Override
     public void displayItem() {
         System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
-        System.out.printf("%-16s%-20s", artist, cdGenre);
+        System.out.printf("%-16s%-11s%-5b ", artist, cdGenre, checkedOut);
     }
 
 }

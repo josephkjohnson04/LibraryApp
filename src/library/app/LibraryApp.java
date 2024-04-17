@@ -237,7 +237,7 @@ public class LibraryApp {
                 if (item instanceof CheckInOut) {
                     CheckInOut checkInOutItem = (CheckInOut) item;
                     if (checkInOutItem.isCheckedOut()) {
-                        checkInOutItem.checkIn(); // Call the checkIn() method
+                        checkInOutItem.checkIn();
                         System.out.println("Checked in: " + item);
                     } else {
                         System.out.println("The item is not checked out.");
@@ -256,7 +256,7 @@ public class LibraryApp {
                 if (item instanceof CheckInOut) {
                     CheckInOut checkInOutItem = (CheckInOut) item;
                     if (!checkInOutItem.isCheckedOut()) {
-                        checkInOutItem.checkOut(); // Call the checkOut() method
+                        checkInOutItem.checkOut();
                         System.out.println("Checked out: " + item);
                     } else {
                         System.out.println("The item is already checked out.");
@@ -267,7 +267,6 @@ public class LibraryApp {
         }
         System.out.println("ID " + id + " not found!");
     }
-
 
     /**
      * Display the Library's inventory's detail group by inventory type.

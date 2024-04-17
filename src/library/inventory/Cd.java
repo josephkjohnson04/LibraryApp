@@ -8,7 +8,7 @@ package library.inventory;
  * @link https://github.com/josephkjohnson04/app.LibraryApp.git
  */
 
-public class Cd extends Item {
+public class Cd extends Item implements CheckInOut{
 
     // Instance Fields
 
@@ -111,18 +111,18 @@ public class Cd extends Item {
     // Additional Methods
 
     @Override
-    public void checkedOut() {
+    public void checkOut() {
         checkedOut = true;
     }
 
     @Override
-    public void checkedIn() {
+    public void checkIn() {
         checkedOut = false;
     }
 
     @Override
-    public String getIsCheckedOut() {
-        return checkedOut ? "Yes" : "No";
+    public boolean isCheckedOut() {
+        return checkedOut;
     }
 
     /**
@@ -131,7 +131,7 @@ public class Cd extends Item {
     @Override
     public void displayItem() {
         System.out.printf("%-4d%-16s%-5s ", id, title, getDateString());
-        System.out.printf("%-16s%-11s%-5s ", artist, cdGenre, getIsCheckedOut());
+        System.out.printf("%-16s%-11s%-5b ", artist, cdGenre, checkedOut);
     }
 
 }

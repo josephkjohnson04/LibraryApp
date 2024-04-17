@@ -6,5 +6,5 @@ public interface CheckInOut {
 
     void checkIn();
 
-    boolean isCheckedOut();
+    String isCheckedOut();
 }

@@ -236,7 +236,7 @@ public class LibraryApp {
             if (item.getId() == id) {
                 if (item instanceof CheckInOut) {
                     CheckInOut checkInOutItem = (CheckInOut) item;
-                    if (checkInOutItem.isCheckedOut()) {
+                    if ("yes".equals(checkInOutItem.isCheckedOut())) {
                         checkInOutItem.checkIn();
                         System.out.println("Checked in: " + item);
                     } else {
@@ -255,7 +255,7 @@ public class LibraryApp {
             if (item.getId() == id) {
                 if (item instanceof CheckInOut) {
                     CheckInOut checkInOutItem = (CheckInOut) item;
-                    if (!checkInOutItem.isCheckedOut()) {
+                    if (!"yes".equals(checkInOutItem.isCheckedOut())) {
                         checkInOutItem.checkOut();
                         System.out.println("Checked out: " + item);
                     } else {

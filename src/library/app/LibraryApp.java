@@ -230,6 +230,48 @@ public class LibraryApp {
         }
     }
 
+    private void checkInItem() {
+        int id = Input.getInt("Please enter item ID to check in: ");
+        for (Item item : inventory) {
+            if (item.getId() == id) {
+                if (item instanceof CheckInOut) {
+                    CheckInOut checkInOutItem = (CheckInOut) item;
+                    if (checkInOutItem.isCheckedOut()) {
+                        checkInOutItem.checkIn();
+                        System.out.println("Successfully checked in: " + item);
+                    } else {
+                        System.out.println("The item is not checked out.");
+                    }
+                } else {
+                    System.out.println("This item does not support check in/out.");
+                }
+                return;
+            }
+        }
+        System.out.println("ERROR: Inventory ID " + id + " not found!");
+    }
+
+    private void checkOutItem() {
+        int id = Input.getInt("Please enter item ID to check out: ");
+        for (Item item : inventory) {
+            if (item.getId() == id) {
+                if (item instanceof CheckInOut) {
+                    CheckInOut checkInOutItem = (CheckInOut) item;
+                    if (!checkInOutItem.isCheckedOut()) {
+                        checkInOutItem.checkOut();
+                        System.out.println("Successfully checked out: " + item);
+                    } else {
+                        System.out.println("The item is already checked out.");
+                    }
+                } else {
+                    System.out.println("This item does not support check in/out.");
+                }
+                return;
+            }
+        }
+        System.out.println("ERROR: Inventory ID " + id + " not found!");
+    }
+
     /**
      * Display the Library's inventory's detail group by inventory type.
      */
@@ -289,8 +331,10 @@ public class LibraryApp {
             System.out.println("3 = Display Inventory");
             System.out.println("4 = Save Inventory");
             System.out.println("5 = Load Inventory");
+            System.out.println("6 = Check In Item");
+            System.out.println("7 = Check Out Item");
             System.out.println(SINGLE_LINE);
-            userInput = Input.getIntRange("Menu Choice: ", 0, 6);
+            userInput = Input.getIntRange("Menu Choice: ", 0, 7);
             System.out.println(SINGLE_LINE);
             switch (userInput) {
                 case 0:
@@ -322,6 +366,12 @@ public class LibraryApp {
                 case 5:
                     loadInventory();
                     System.out.println("Loading Game...");
+                    break;
+                case 6:
+                    checkInItem();
+                    break;
+                case 7:
+                    checkOutItem();
                     break;
                 default:
                     throw new Exception("Invalid menu choice: " + userInput);

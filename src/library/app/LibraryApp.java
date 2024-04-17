@@ -236,7 +236,7 @@ public class LibraryApp {
             if (item.getId() == id) {
                 if (item instanceof CheckInOut) {
                     CheckInOut checkInOutItem = (CheckInOut) item;
-                    if ("yes".equals(checkInOutItem.isCheckedOut())) {
+                    if (!"yes".equals(checkInOutItem.isCheckedOut())) {
                         checkInOutItem.checkIn();
                         System.out.println("Checked in: " + item);
                     } else {
@@ -322,8 +322,8 @@ public class LibraryApp {
             System.out.println("Main Menu");
             System.out.println(SINGLE_LINE);
             System.out.println("0 = Exit");
-            System.out.println("1 = Add inventory.Item");
-            System.out.println("2 = Delete inventory.Item");
+            System.out.println("1 = Add Inventory Item");
+            System.out.println("2 = Delete Inventory Item");
             System.out.println("3 = Display Inventory");
             System.out.println("4 = Save Inventory");
             System.out.println("5 = Load Inventory");

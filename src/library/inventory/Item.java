@@ -49,6 +49,8 @@ public abstract class Item implements Serializable {
      */
     protected LocalDate invDate;
 
+    private boolean checkedOut;
+
     // Overload Constructor
 
     /**
@@ -151,6 +153,18 @@ public abstract class Item implements Serializable {
         } catch (Exception e){
             throw new Exception("Invalid date! Must be MM-DD-YYYY");
         }
+    }
+
+    public String getIsCheckedOut() {
+        return checkedOut ? "yes" : "no";
+    }
+
+    public void checkedIn() {
+        checkedOut = false;
+    }
+
+    public void checkedOut() {
+        checkedOut = true;
     }
 
     // Additional Methods

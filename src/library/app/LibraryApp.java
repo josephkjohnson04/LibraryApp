@@ -236,8 +236,8 @@ public class LibraryApp {
     private void displayInventory(){
         System.out.println("\nBook Inventory");
         System.out.println(SINGLE_LINE);
-        System.out.println("ID  Title           Date Rec'd Author          Genre");
-        System.out.println("--- --------------- ---------- --------------- ----------");
+        System.out.println("ID  Title           Date Rec'd Author          Genre      Checked Out?");
+        System.out.println("--- --------------- ---------- --------------- ---------- ------------");
         for (Item item : inventory) {
             if (item instanceof Book){
                 item.displayItem();

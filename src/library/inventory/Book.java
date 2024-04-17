@@ -130,7 +130,7 @@ public class Book extends Item implements CheckInOut{
      */
     @Override
     public void displayItem() {
-        System.out.printf("%-4d%-16s%-5s ", id, title, invDate);
+        System.out.printf("%-4d%-16s%-5s ", id, title, getDateString());
         System.out.printf("%-16s%-11s%-5b ", author, bookGenre, checkedOut);
     }
 

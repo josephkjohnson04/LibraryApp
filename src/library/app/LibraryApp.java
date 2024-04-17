@@ -238,17 +238,15 @@ public class LibraryApp {
                     CheckInOut checkInOutItem = (CheckInOut) item;
                     if (checkInOutItem.isCheckedOut()) {
                         checkInOutItem.checkIn();
-                        System.out.println("Successfully checked in: " + item);
+                        System.out.println("Checked in: " + item);
                     } else {
                         System.out.println("The item is not checked out.");
                     }
-                } else {
-                    System.out.println("This item does not support check in/out.");
                 }
                 return;
             }
         }
-        System.out.println("ERROR: Inventory ID " + id + " not found!");
+        System.out.println("ID " + id + " not found!");
     }
 
     private void checkOutItem() {
@@ -259,17 +257,15 @@ public class LibraryApp {
                     CheckInOut checkInOutItem = (CheckInOut) item;
                     if (!checkInOutItem.isCheckedOut()) {
                         checkInOutItem.checkOut();
-                        System.out.println("Successfully checked out: " + item);
+                        System.out.println("Checked out: " + item);
                     } else {
                         System.out.println("The item is already checked out.");
                     }
-                } else {
-                    System.out.println("This item does not support check in/out.");
                 }
                 return;
             }
         }
-        System.out.println("ERROR: Inventory ID " + id + " not found!");
+        System.out.println("ID " + id + " not found!");
     }
 
     /**
